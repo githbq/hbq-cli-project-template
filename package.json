@@ -1,5 +1,5 @@
 {
-    "name": "cli-template",
+    "name": "<%= name %>",
     "version": "0.0.1",
     "description": "command line template",
     "publishConfig": {
@@ -7,7 +7,7 @@
     },
     "main": "build/core",
     "bin": {
-        "xxxx": "./build/bin/index.js"
+        "<%= name %>": "./build/bin/index.js"
     },
     "scripts": {
         "start:build": "npm run tsc && node build",
