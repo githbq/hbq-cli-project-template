@@ -1,0 +1,44 @@
+{
+    "name": "cli-template",
+    "version": "0.0.1",
+    "description": "command line template",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
+    "main": "build/core",
+    "bin": {
+        "xxxx": "./build/bin/index.js"
+    },
+    "scripts": {
+        "start:build": "npm run tsc && node build",
+        "start": "node run",
+        "clear": "rimraf build",
+        "tsc": "npm run clear && tsc",
+        "tsc:w": "npm run clear && tsc -w",
+        "p": "npm run tsc && npm publish",
+        "test": "jest --forceExit --detectOpenHandles --colors",
+        "lint": "eslint --ext .ts src --fix"
+    },
+    "dependencies": {
+        "cli-parent": "^0.0.1"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.20",
+        "@types/node": "^14.14.33",
+        "eslint": "^7.21.0",
+        "jest": "^26.4.2",
+        "rimraf": "^2.6.1",
+        "ts-jest": "^26.3.0",
+        "ts-node": "^3.0.2",
+        "typescript": "^3.9.7"
+    },
+    "keywords": [
+        "typescript"
+    ],
+    "author": "hubiqing",
+    "repository": "https://github.com/githbq/hbq-cli-project-template.git",
+    "engines": {
+        "node": ">=10"
+    },
+    "license": "MIT"
+}
